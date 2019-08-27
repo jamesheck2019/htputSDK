@@ -1,4 +1,9 @@
 # htputSDK
+`Download`
+[https://github.com/jamesheck2019/htputSDK/releases](https://github.com/jamesheck2019/htputSDK/releases)<br>
+<br>
+[![NuGet version (BlackBeltCoder.Silk)](https://img.shields.io/nuget/v/DeQmaTech.htputSDK.svg?style=plastic)](https://www.nuget.org/packages/DeQmaTech.htputSDK/)
+
 htput.com SDK for .NET
 <ul>
 	<li>.NET 4.5.2</li>
