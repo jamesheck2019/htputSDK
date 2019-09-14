@@ -1,29 +1,35 @@
-# htputSDK
-`Download`
-[https://github.com/jamesheck2019/htputSDK/releases](https://github.com/jamesheck2019/htputSDK/releases)<br>
-<br>
-[![NuGet version (BlackBeltCoder.Silk)](https://img.shields.io/nuget/v/DeQmaTech.htputSDK.svg?style=plastic)](https://www.nuget.org/packages/DeQmaTech.htputSDK/)
+Welcome to the htputSDK wiki!
 
-htput.com SDK for .NET
-<ul>
-	<li>.NET 4.5.2</li>
-	<li>One dependency library [Newtonsoft.Json]</li>
-</ul>
-====
-<ul>
-	<li>AppendPage</li>
-	<li>DeletePage</li>
-	<li>GetPageAs</li>
-	<li>ReplacePage</li>
-	<li>CreateNewPage</li>
-</ul>
+`Download:`[https://github.com/loudKode/htputSDK/releases](https://github.com/loudKode/htputSDK/releases)<br>
+`NuGet:`
+[![NuGet](https://img.shields.io/nuget/v/DeQmaTech.htputSDK.svg?style=flat-square&logo=nuget)](https://www.nuget.org/packages/DeQmaTech.htputSDK)<br>
+
+**Features**
+* Assemblies for .NET 4.5.2 and .NET Standard 2.0
+* Just one external reference (Newtonsoft.Json)
+* Easy installation using NuGet
+* Upload/Download tracking support
+* Proxy Support
+* Upload/Download cancellation support
+
+# Functions:
+* AppendPage
+* DeletePage
+* GetPageAs
+* ReplacePage
+* CreateNewPage
 
 # Code simple:
+
+**set client**
 ```vb.net
 Dim clnt As htputSDK.IClient = New htputSDK.HClient()
-Dim RSLT = Await clnt.CreateNewPage(RichTextBox1.Text, htputSDK.utilitiez.SentType.String, TextBox1.Text, nothing, nothing, nothing)
-Dim RSLT = Await clnt.DeletePage(TextBox3.Text, TextBox2.Text, nothing, nothing)
-Dim RSLT = Await clnt.ReplacePage(TextBox4.Text, RichTextBox2.Text, htputSDK.utilitiez.SentType.String, TextBox5.Text, nothing, nothing, nothing)
-Dim RSLT = Await clnt.AppendPage(TextBox7.Text, (Environment.NewLine & RichTextBox3.Text), htputSDK.utilitiez.SentType.String, TextBox6.Text, nothing, nothing, nothing)
-Await clnt.Download(TextBox8.Text, "C:\FileName.html", nothing, nothing, nothing)
+```
+**publish new page**
+```vb
+Dim RSLT = Await clnt.CreateNewPage("html code", SentType.String, "domain address e.g. google", nothing, nothing, nothing)
+```
+**delete published page**
+```vb.net
+Dim RSLT = Await clnt.DeletePage("domain address e.g. google", "deleteID", nothing, nothing)
 ```
