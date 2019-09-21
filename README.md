@@ -25,6 +25,11 @@ Welcome to the htputSDK wiki!
 ```vb.net
 Dim clnt As htputSDK.IClient = New htputSDK.HClient()
 ```
+**set client with proxy**
+```vb.net
+Dim m_proxy = New htputSDK.ProxyConfig With {.SetProxy = True, .ProxyIP = "172.0.0.0", .ProxyPort = 80, .ProxyUsername = "usr", .ProxyPassword = "pas"}
+Dim clnt As htputSDK.IClient = New htputSDK.HClient(m_proxy)
+```
 **publish new page**
 ```vb
 Dim RSLT = Await clnt.CreateNewPage("html code", SentType.String, "domain address e.g. google", nothing, nothing, nothing)
